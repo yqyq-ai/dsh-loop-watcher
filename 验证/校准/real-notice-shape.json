@@ -1,0 +1,55 @@
+{
+ "_note": "上游守卫注入的那条通知，按 DSH 的 messageDefinition/contextMessage 形状还原成聊天节点，用于回归。节点类型是 turn-trigger（不是 context）—— 这正是当年把通知丢掉的原因。会话 ID 已脱敏（合成值），但节点形状与字段保持真实。",
+ "event": {
+  "type": "user/message",
+  "seq": 33,
+  "time": 1792043519332,
+  "surfaceOp": "append",
+  "source": {
+   "kind": "loop-guard",
+   "form": "notice",
+   "summary": "已截断重复的思考内容（513 字符）"
+  }
+ },
+ "node": {
+  "key": "node-33",
+  "kind": "turn-trigger",
+  "anchorSeq": 33,
+  "data": {
+   "kind": "context",
+   "seq": 33,
+   "time": 1792043519332,
+   "content": [
+    {
+     "type": "text",
+     "text": "你的思考内容已连续重复 513 个字符而没有进展，因此响应被中途截断。不要重复这段内容，继续完成你原本的任务。"
+    }
+   ],
+   "source": {
+    "kind": "loop-guard",
+    "form": "notice",
+    "summary": "已截断重复的思考内容（513 字符）"
+   }
+  }
+ },
+ "mountedAt": 1792043514332,
+ "stepNodes": [
+  {
+   "key": "2:1",
+   "kind": "assistant-step",
+   "anchorSeq": 29,
+   "data": {
+    "status": "settled",
+    "turn": 2,
+    "step": 1,
+    "blocks": [
+     {
+      "kind": "reasoning",
+      "text": "x"
+     }
+    ],
+    "time": 1792043519232
+   }
+  }
+ ]
+}

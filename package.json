@@ -1,0 +1,60 @@
+{
+  "name": "dsh-loop-watcher",
+  "version": "0.3.1",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "打转的通知器 + 计数器 + 交接器：把上游守卫的静默切断变成横幅，在会话头显示「本对话已打断 N 次」，需要时一键开新会话交接。不做检测、不做切断。",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "cordis.patch.yml",
+    "README.md",
+    "README_EN.md"
+  ],
+  "meta": {
+    "title": "打转守望",
+    "description": "盯住上游守卫的打转切断：横幅通知、会话头计数徽章、一键交接。不装上游则什么都不显示。"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ],
+      "external": []
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "loop-detection",
+    "reasoning",
+    "handover"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "peerDependencies": {
+    "@mrweicodes/dsh-loop-guard": ">=1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@mrweicodes/dsh-loop-guard": {
+      "optional": true
+    }
+  }
+}

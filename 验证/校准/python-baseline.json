@@ -1,0 +1,80 @@
+[
+  {
+    "run": 2,
+    "line": "好。",
+    "count": 32996,
+    "lines": 145583,
+    "ratio": 0.226647,
+    "loopy": true,
+    "key": "pos-sample-1",
+    "session": "session-sample-positive-0001",
+    "chars": 1938635,
+    "segments": 863,
+    "expect_loopy": true
+  },
+  {
+    "run": 3,
+    "line": "好。",
+    "count": 14924,
+    "lines": 41046,
+    "ratio": 0.363592,
+    "loopy": true,
+    "key": "pos-sample-2",
+    "session": "session-sample-positive-0002",
+    "chars": 1118391,
+    "segments": 417,
+    "expect_loopy": true
+  },
+  {
+    "run": 2,
+    "line": "```",
+    "count": 323,
+    "lines": 8012,
+    "ratio": 0.040315,
+    "loopy": false,
+    "key": "neg-sample-1",
+    "session": "session-sample-negative-0001",
+    "chars": 273711,
+    "segments": 151,
+    "expect_loopy": false
+  },
+  {
+    "run": 3,
+    "line": "```",
+    "count": 365,
+    "lines": 7299,
+    "ratio": 0.050007,
+    "loopy": false,
+    "key": "neg-sample-2",
+    "session": "session-sample-negative-0002",
+    "chars": 295431,
+    "segments": 165,
+    "expect_loopy": false
+  },
+  {
+    "run": 3,
+    "line": "```",
+    "count": 387,
+    "lines": 12548,
+    "ratio": 0.030842,
+    "loopy": false,
+    "key": "neg-sample-3",
+    "session": "session-sample-negative-0003",
+    "chars": 427704,
+    "segments": 200,
+    "expect_loopy": false
+  },
+  {
+    "run": 0,
+    "line": "```",
+    "count": 16,
+    "lines": 1533,
+    "ratio": 0.010437,
+    "loopy": false,
+    "key": "neg-sample-4",
+    "session": "session-sample-negative-0004",
+    "chars": 128593,
+    "segments": 115,
+    "expect_loopy": false
+  }
+]

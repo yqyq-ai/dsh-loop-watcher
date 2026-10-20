@@ -1,0 +1,18 @@
+# dsh-loop-watcher bundle patch layer.
+#
+# entry id 用 `loop-watcher`（不是 `loop-guard`）：上游守卫
+# `@mrweicodes/dsh-loop-guard` 自己占用了 `loop-guard` 这个 id，
+# 撞车会让两个插件之一失效。
+#
+# 本插件**不做检测、不做切断** —— 那是上游的职责。它只做四件事：
+#   ① 把上游的静默切断变成一条横幅；
+#   ② 在会话头显示「本对话已打断 N 次」计数徽章；
+#   ③ 需要换会话时，一键开新会话并把交接指令预填好（指令最前面可注入
+#      「前缀提示词」，在设置页开关与修改 —— 2026-10-17 新增）；
+#   ④ 提供设置页（settings.section，侧边栏 → 设置 → 打转守望）。
+#
+# ⚠️ 必须先装上游，否则横幅与计数永远不出现（没有数据来源）：
+#     dsh plugin --profile <profile> add @mrweicodes/dsh-loop-guard
+- insert:
+    - id: loop-watcher
+      name: 'dsh-loop-watcher'

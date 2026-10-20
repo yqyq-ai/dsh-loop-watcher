@@ -1,0 +1,4 @@
+{
+  "meta.title": "Loop Watcher",
+  "meta.description": "Watches the upstream guard's loop cuts: a banner, an \"N interruptions\" badge in the Session header, and one-click handover. It detects and cuts nothing; without the upstream guard it shows nothing."
+}
